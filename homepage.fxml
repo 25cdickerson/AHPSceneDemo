@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="401.0" stroke="BLACK" strokeType="INSIDE" width="600.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.009800000116229057" green="0.6094853281974792" blue="0.9800000190734863" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Line endX="36.0" endY="299.0" layoutX="264.0" layoutY="101.0" startX="36.0" startY="-101.0" />
+      <TextField layoutX="88.0" layoutY="175.0" promptText="Username" />
+      <TextField layoutX="377.0" layoutY="175.0" promptText="Username" />
+      <PasswordField layoutX="88.0" layoutY="221.0" promptText="Password" />
+      <PasswordField layoutX="377.0" layoutY="221.0" promptText="Password" />
+      <Text layoutX="126.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="411.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</Pane>
