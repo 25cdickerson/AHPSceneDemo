@@ -8,6 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import model.ViewTransitionalModel;
+import view.Cont;
 
 public class Run extends Application {
 
@@ -18,7 +20,8 @@ public class Run extends Application {
 		
 		Parent view= loader.load();
 		
-		Controller control= loader.getController();
+		Cont control= loader.getController();
+		control.setModel(new ViewTransitionalModel(view));
 		
 		Scene S= new Scene(view);
 		stage.setScene(S);
@@ -27,10 +30,6 @@ public class Run extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
-		
-	}
-	
-	public static void setview(Parent view) {
 		
 	}
 }
