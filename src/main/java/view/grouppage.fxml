@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -22,8 +24,22 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="minecraftButton" mnemonicParsing="false" onAction="#onMinecraft" prefHeight="164.0" prefWidth="314.0" text="Minecraft" />
-            <Button fx:id="fortniteButton" mnemonicParsing="false" onAction="#onFortnite" prefHeight="220.0" prefWidth="370.0" text="Fortnite" GridPane.columnIndex="1" />
+            <Button fx:id="minecraftButton" mnemonicParsing="false" onAction="#onMinecraft" prefHeight="164.0" prefWidth="314.0">
+               <graphic>
+                  <ImageView fitHeight="125.0" fitWidth="287.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Images/MinecraftIcon.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="fortniteButton" mnemonicParsing="false" onAction="#onFortnite" prefHeight="220.0" prefWidth="370.0" GridPane.columnIndex="1">
+               <graphic>
+                  <ImageView fitHeight="121.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Images/FortniteIcon.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
             <Button mnemonicParsing="false" prefHeight="263.0" prefWidth="411.0" GridPane.rowIndex="1" />
             <Button mnemonicParsing="false" prefHeight="189.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Button mnemonicParsing="false" prefHeight="260.0" prefWidth="376.0" GridPane.rowIndex="2" />
