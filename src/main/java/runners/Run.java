@@ -4,7 +4,6 @@ import java.lang.ModuleLayer.Controller;
 
 import javafx.application.*;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -18,7 +17,7 @@ public class Run extends Application {
 		FXMLLoader loader= new FXMLLoader();
 		loader.setLocation(Run.class.getResource("../view/homepage.fxml"));
 		
-		Parent view= loader.load();
+		BorderPane view= loader.load();
 		
 		Cont control= loader.getController();
 		control.setModel(new ViewTransitionalModel(view));

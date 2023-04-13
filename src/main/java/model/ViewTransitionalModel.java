@@ -5,12 +5,13 @@ import javafx.beans.property.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import runners.Run;
 
 public class ViewTransitionalModel {
-	Parent mainview; 
+	BorderPane mainview; 
 	
-	public ViewTransitionalModel(Parent view) {
+	public ViewTransitionalModel(BorderPane view) {
 		mainview= view;
 	}
 	
@@ -18,7 +19,8 @@ public class ViewTransitionalModel {
 		FXMLLoader loader= new FXMLLoader();
 		loader.setLocation(ViewTransitionalModel.class.getResource("../view/homepage.fxml"));
 		
-		Parent view= loader.load();
+		BorderPane view= loader.load();
+		mainview.setCenter(view);
 	}
 	
 	public void showgrouppage() throws IOException {
@@ -26,6 +28,7 @@ public class ViewTransitionalModel {
 		loader.setLocation(ViewTransitionalModel.class.getResource("../view/grouppage.fxml"));
 		
 		Parent view= loader.load();
+		mainview.setCenter(view);
 		
 	}
 	
@@ -34,6 +37,7 @@ public class ViewTransitionalModel {
 		loader.setLocation(ViewTransitionalModel.class.getResource("../view/Fortnitegroupchats.fxml"));
 		
 		Parent view= loader.load();
+		mainview.setCenter(view);
 	}
 	
 	public void showminecraft() throws IOException {
@@ -41,6 +45,7 @@ public class ViewTransitionalModel {
 		loader.setLocation(ViewTransitionalModel.class.getResource("../view/Minecraftgroupchats.fxml"));
 		
 		Parent view= loader.load();
+		mainview.setCenter(view);
 	}
 	
 }
