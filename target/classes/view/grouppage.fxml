@@ -4,16 +4,15 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Cont">
    <center>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane alignment="CENTER" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -24,22 +23,14 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="minecraftButton" mnemonicParsing="false" onAction="#onMinecraft" prefHeight="164.0" prefWidth="314.0">
-               <graphic>
-                  <ImageView fitHeight="125.0" fitWidth="287.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../Images/MinecraftIcon.jpg" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button fx:id="fortniteButton" mnemonicParsing="false" onAction="#onFortnite" prefHeight="220.0" prefWidth="370.0" GridPane.columnIndex="1">
-               <graphic>
-                  <ImageView fitHeight="121.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../Images/FortniteIcon.jpg" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
+            <Button fx:id="minecraftButton" mnemonicParsing="false" onAction="#onMinecraft" prefHeight="164.0" prefWidth="314.0" text="Minecraft">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="fortniteButton" mnemonicParsing="false" onAction="#onFortnite" prefHeight="220.0" prefWidth="370.0" text="Fortnite" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
             <Button mnemonicParsing="false" prefHeight="263.0" prefWidth="411.0" GridPane.rowIndex="1" />
             <Button mnemonicParsing="false" prefHeight="189.0" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Button mnemonicParsing="false" prefHeight="260.0" prefWidth="376.0" GridPane.rowIndex="2" />
@@ -52,9 +43,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="⚙">
             <items>
-              <MenuItem mnemonicParsing="false" text="Add Group" />
-                  <MenuItem mnemonicParsing="false" text="Settings" />
-                  <MenuItem mnemonicParsing="false" text="Edit Profile" />
+              <MenuItem mnemonicParsing="false" onAction="#onNewGroup" text="Add Group" />
+                  <MenuItem mnemonicParsing="false" onAction="#onUserSettings" text="Edit Profile" />
             </items>
           </Menu>
         </menus>
